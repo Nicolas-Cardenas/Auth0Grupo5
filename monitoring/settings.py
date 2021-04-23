@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'measurements',
     'variables',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -78,11 +79,11 @@ WSGI_APPLICATION = 'monitoring.wsgi.application'
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'name_db',
-         'USER': 'user_db',
-         'PASSWORD': 'user_password',
-         'HOST': 'localhost',
-         'PORT': '',
+         'NAME': 'monitoringDB',
+         'USER': 'monitoringUser',
+         'PASSWORD': 'isis2503',
+         'HOST': 'monitoring-db.coznym6gaxbv.us-east-1.rds.amazonaws.com',
+         'PORT': '5432',
      }
  }
 
@@ -105,6 +106,24 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LOGIN_URL="/login/auth0"
+LOGIN_REDIRECT_URL="/"
+LOGOUT_REDIRECT_URL="https://isis2503-nicolas-cardenas.us.auth0.com/v2/logout?returnTo=http%3A%2F%2F54.160.64.101:8000"
+
+SOCIAL_AUTH_TRAILING_SLASH=False
+SOCIAL_AUTH_AUTH0_DOMAIN='isis2503-nicolas-cardenas.us.auth0.com'
+SOCIAL_AUTH_AUTH0_KEY='5XeOZDqCdkteaACTywy0fJK4d7cse3cZ'
+SOCIAL_AUTH_AUTH0_SECRET='ecqyTraCfaDE3xGP9WpWsrF2w3DpOT2am7u_EifibradkuUK10MI0CRBtfWDnufi'
+
+SOCIAL_AUTH_AUTH0_SCOPE=[
+    'openid',
+    'profile'
+]
+
+AUTHENTICATION_BACKENDS={
+    'monitoring.auth0backend.Auth0',
+    'django.contrib.auth.backends.ModelBackend',
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
