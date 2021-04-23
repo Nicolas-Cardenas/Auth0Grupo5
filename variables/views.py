@@ -19,6 +19,7 @@ def variable_list(request):
     else:
         return HttpResponse("Unauthorized User")
 
+
 @login_required
 def single_variable(request, id=0):
     variable = get_variable(id)
