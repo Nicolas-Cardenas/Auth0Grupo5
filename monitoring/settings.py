@@ -115,6 +115,7 @@ SOCIAL_AUTH_AUTH0_DOMAIN='isis2503-nicolas-cardenas.us.auth0.com'
 SOCIAL_AUTH_AUTH0_KEY='5XeOZDqCdkteaACTywy0fJK4d7cse3cZ'
 SOCIAL_AUTH_AUTH0_SECRET='ecqyTraCfaDE3xGP9WpWsrF2w3DpOT2am7u_EifibradkuUK10Ml0CRBtfWDnufi'
 
+
 SOCIAL_AUTH_AUTH0_SCOPE=[
     'openid',
     'profile'
