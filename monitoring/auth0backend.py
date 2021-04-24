@@ -21,18 +21,18 @@ class Auth0(BaseOAuth2):
     def get_user_id(self,details,response):
         return details['user_id']
     
-    def get_user_details(self,response):
-        url='https://'+self.setting('DOMAIN')+'/userinfo'
-        headers={'authorization':'Bearer'+response['access_token']}
-        resp=requests.get(url,headers=headers)
-        print('11111111111111111111')
-        userinfo=resp.json()
-        print('222222222222222222')
+ #   def get_user_details(self,response):
+  #      url='https://'+self.setting('DOMAIN')+'/userinfo'
+   #     headers={'authorization':'Bearer'+response['access_token']}
+    #    resp=requests.get(url,headers=headers)
+     #   print('11111111111111111111')
+      #  userinfo=resp.json()
+      #  print('222222222222222222')
 
-        return {'username':userinfo['nickname'],
-        'first_name':userinfo['name'],
-        'picture':userinfo['picture'],
-        'user_id':userinfo['sub']}
+     #   return {'username':userinfo['nickname'],
+      #  'first_name':userinfo['name'],
+      #  'picture':userinfo['picture'],
+      #  'user_id':userinfo['sub']}
 
 
 def getRole(request):
