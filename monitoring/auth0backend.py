@@ -25,7 +25,7 @@ class Auth0(BaseOAuth2):
         url='https://'+self.setting('DOMAIN')+'/userinfo'
         print(url)
         headers={'authorization':'Bearer '+response['access_token']}
-        resp=requests.get('https://https://isis2503-cardi:us:auth0:com/userinfo',headers=headers)
+        resp=requests.get(url,headers=headers)
         print('11111111111111111111')
         userinfo=resp.json()
         print('222222222222222222')
@@ -33,7 +33,7 @@ class Auth0(BaseOAuth2):
         print('444444444')
 
 
-        return {'username':userinfo['nickname'],
+        return {'username':userinfo['role'],
         'first_name':userinfo['name'],
         'picture':userinfo['picture'],
         'user_id':userinfo['sub']}
