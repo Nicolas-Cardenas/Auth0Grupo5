@@ -35,7 +35,7 @@ class Auth0(BaseOAuth2):
 
         return {'username':userinfo['nickname'],
         'first_name':userinfo['name'],
-        'picture':userinfo['picture']',
+        'picture':userinfo['picture'],
         'user_id':userinfo['sub']}
 
 
