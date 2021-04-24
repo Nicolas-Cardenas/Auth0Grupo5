@@ -30,7 +30,7 @@ class Auth0(BaseOAuth2):
         return {'username':userinfo['nickname'],
         'first_name':userinfo['name'],
         'picture':userinfo['picture'],
-        'user_id':userinfo['user_id']}
+        'user_id':userinfo['sub']}
 
 
 def getRole(request):
@@ -42,7 +42,7 @@ def getRole(request):
     resp=requests.get(url,headers=headers)
     userinfo=resp.json()
     role=userinfo['https://isis2503-cardi:us:auth0:com/role']
-    print(role)
+    print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
     return(role)
 
 
