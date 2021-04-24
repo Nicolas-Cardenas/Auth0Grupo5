@@ -15,12 +15,11 @@ def measurement_list(request):
         context={
             'measurement_list': measurements
         }
-         return render(request, 'Measurement/measurements.html', context)
+        return render(request, 'Measurement/measurements.html', context)
     else:
         return HttpResponse("Unauthorized User")
 
-    
-   
+        
 
 def measurement_create(request):
     if request.method == 'POST':
