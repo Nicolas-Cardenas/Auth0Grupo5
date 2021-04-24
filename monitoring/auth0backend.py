@@ -10,6 +10,7 @@ class Auth0(BaseOAuth2):
         ('picture','picture')
     ]
 
+
     def authorization_url(self):
         return "https://"+self.setting('DOMAIN')+"/authorize"
 
@@ -40,7 +41,7 @@ def getRole(request):
     headers={'authorization':'Bearer'+accessToken}
     resp=requests.get(url,headers=headers)
     userinfo=resp.json()
-    role=userinfo['https://isis2503-nicolas-cardenas:us:auth0:com/role']
+    role=userinfo['https://isis2503-nicolas-cardenas.us.auth0.com/role']
     return(role)
 
 
