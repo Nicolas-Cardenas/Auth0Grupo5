@@ -25,7 +25,7 @@ class Auth0(BaseOAuth2):
         url='https://'+self.setting('DOMAIN')+'/userinfo'
         print(url)
         headers={'authorization':'Bearer '+response['access_token']}
-        resp=requests.get(url,headers=headers)
+        resp=requests.get('https://'+self.setting('DOMAIN')+'/userinfo',headers=headers)
         print('11111111111111111111')
         userinfo=resp.json()
         print('222222222222222222')
