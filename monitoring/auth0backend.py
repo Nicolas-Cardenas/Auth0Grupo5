@@ -33,10 +33,10 @@ class Auth0(BaseOAuth2):
         print('444444444')
 
 
-        return {'username':'aaa',
-        'first_name':'aaa',
-        'picture':'aaa',
-        'user_id':'aaa'}
+        return {'username':userinfo['nickname'],
+        'first_name':userinfo['name'],
+        'picture':userinfo['picture']',
+        'user_id':userinfo['sub']}
 
 
 def getRole(request):
