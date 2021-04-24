@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LOGIN_URL="/login/auth0"
 LOGIN_REDIRECT_URL="/"
-LOGOUT_REDIRECT_URL="https://isis2503-nicolas-cardenas.us.auth0.com/v2/logout?returnTo=http%3A%2F%2F23.20.192.103:8000"
+LOGOUT_REDIRECT_URL="https://isis2503-nicolas-cardenas.us.auth0.com/v2/logout?returnTo=http%3A%2F%2F54.90.184.196:8000"
 
 SOCIAL_AUTH_TRAILING_SLASH=False
 SOCIAL_AUTH_AUTH0_DOMAIN='isis2503-nicolas-cardenas.us.auth0.com'
