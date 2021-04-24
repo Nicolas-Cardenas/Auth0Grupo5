@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'monitoring.wsgi.application'
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'monitoringDB',
+         'NAME': 'monitoringBD',
          'USER': 'monitoringUser',
-         'PASSWORD': 'isis2503',
-         'HOST': 'monitoring-db.coznym6gaxbv.us-east-1.rds.amazonaws.com',
+         'PASSWORD': 'isis25032021',
+         'HOST': 'monitoring-bd.coznym6gaxbv.us-east-1.rds.amazonaws.com',
          'PORT': '5432',
      }
  }
@@ -108,12 +108,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LOGIN_URL="/login/auth0"
 LOGIN_REDIRECT_URL="/"
-LOGOUT_REDIRECT_URL="https://isis2503-nicolas-cardenas.us.auth0.com/v2/logout?returnTo=http%3A%2F%2F54.90.184.196:8000"
+LOGOUT_REDIRECT_URL="https://isis2503-cardi.us.auth0.com/v2/logout?returnTo=http%3A%2F%2F54.196.217.14:8000"
 
 SOCIAL_AUTH_TRAILING_SLASH=False
-SOCIAL_AUTH_AUTH0_DOMAIN='isis2503-nicolas-cardenas.us.auth0.com'
-SOCIAL_AUTH_AUTH0_KEY='FBVqqpschFUXj40tFlW4hCydWstnOVIB'
-SOCIAL_AUTH_AUTH0_SECRET='vNTxeAPxBOqLnWSrE2yy4zD9XxrVuN5Fy3PVN2HR_DdMFENQn0rl_DoCnLbG77Ru'
+SOCIAL_AUTH_AUTH0_DOMAIN='isis2503-cardi.us.auth0.com'
+SOCIAL_AUTH_AUTH0_KEY='VBTBxp5pOEPpdzVH5k8OHbjFywGbqGmO'
+SOCIAL_AUTH_AUTH0_SECRET='rSjaE6lzf49vJZH3MYqdHErS1fSjbH7G-OZpLdOxPX3hDTij4odRUwIbAg9rjwVN'
 
 
 SOCIAL_AUTH_AUTH0_SCOPE=[
