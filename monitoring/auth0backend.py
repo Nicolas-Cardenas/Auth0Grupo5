@@ -25,9 +25,9 @@ class Auth0(BaseOAuth2):
         url='https://'+self.setting('DOMAIN')+'/userinfo'
         headers={'authorization':'Bearer'+response['access_token']}
         resp=requests.get(url,headers=headers)
-        print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+        print('11111111111111111111')
         userinfo=resp.json()
-        print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+        print('222222222222222222')
 
         return {'username':userinfo['nickname'],
         'first_name':userinfo['name'],
@@ -44,7 +44,7 @@ def getRole(request):
     resp=requests.get(url,headers=headers)
     userinfo=resp.json()
     role=userinfo['https://isis2503-cardi:us:auth0:com/role']
-    print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+    print('33333333333333333')
     return(role)
 
 
