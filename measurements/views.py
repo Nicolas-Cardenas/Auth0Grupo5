@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import MeasurementForm
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from .logic.logic_measurement import create_measurement, get_measurements
 from django.contrib.auth.decorators import login_required

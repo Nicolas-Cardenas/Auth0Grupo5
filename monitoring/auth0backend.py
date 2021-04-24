@@ -44,7 +44,6 @@ def getRole(request):
     resp=requests.get(url,headers=headers)
     userinfo=resp.json()
     role=userinfo['https://isis2503-cardi:us:auth0:com/role']
-    print('33333333333333333')
     return(role)
 
 
