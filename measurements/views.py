@@ -10,7 +10,7 @@ from monitoring.auth0backend import getRole
 @login_required
 def measurement_list(request):
     role = getRole(request)
-    if role == "Supervisor":
+    if role == "Supervisor" or role =="Miembro Comunidad":
         measurements = get_measurements()
         context={
             'measurement_list': measurements
