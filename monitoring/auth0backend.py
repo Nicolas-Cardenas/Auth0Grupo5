@@ -25,7 +25,9 @@ class Auth0(BaseOAuth2):
         url='https://'+self.setting('DOMAIN')+'/userinfo'
         headers={'authorization':'Bearer'+response['access_token']}
         resp=requests.get(url,headers=headers)
+        print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
         userinfo=resp.json()
+        print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
 
         return {'username':userinfo['nickname'],
         'first_name':userinfo['name'],
