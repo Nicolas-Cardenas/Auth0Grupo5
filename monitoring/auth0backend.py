@@ -29,6 +29,7 @@ class Auth0(BaseOAuth2):
         print('11111111111111111111')
         userinfo=resp.json()
         print('222222222222222222')
+        print(userinfo)
 
         return {'username':userinfo['nickname'],
         'first_name':userinfo['name'],
