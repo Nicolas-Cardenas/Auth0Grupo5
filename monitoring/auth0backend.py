@@ -23,20 +23,16 @@ class Auth0(BaseOAuth2):
     
     def get_user_details(self,response):
         url='https://'+self.setting('DOMAIN')+'/userinfo'
-        print(url)
         headers={'authorization':'Bearer '+response['access_token']}
         resp=requests.get(url,headers=headers)
-        print('11111111111111111111')
         userinfo=resp.json()
-        print('222222222222222222')
-        print(userinfo)
-        print('444444444')
+        
 
 
-        return {'username':userinfo['nickname'],
-        'first_name':userinfo['name'],
-        'picture':userinfo['picture'],
-        'user_id':userinfo['sub']}
+        return {'username':'Tu Cuenta',
+        'first_name':'Tu Cuenta',
+        'picture':'Picture',
+        'user_id':'ID'}
 
 
 def getRole(request):
