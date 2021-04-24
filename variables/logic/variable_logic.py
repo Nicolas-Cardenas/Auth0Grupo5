@@ -12,3 +12,5 @@ def create_variable(form):
     measurement = form.save()
     measurement.save()
     return ()
+
+    
